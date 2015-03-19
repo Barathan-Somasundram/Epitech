@@ -1,0 +1,5 @@
+push int32(405482)
+push float(456.48)
+sub
+dump
+exit

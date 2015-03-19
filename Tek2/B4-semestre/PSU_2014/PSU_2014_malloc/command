@@ -1,0 +1,2 @@
+LD_PRELOAD=$HOME/rendu/PSU_2014_malloc/ ./(binary)
+gcc -o binary main.c -L./ -Wl,-rpath=./ -lmy_malloc

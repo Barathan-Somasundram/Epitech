@@ -1,0 +1,43 @@
+push int8(42)
+push int32(1000)
+mul
+assert int32(42000)
+push int8(42)
+sub
+push double(45.584)
+mul
+dump
+pop
+push double(4561287)
+push double(454654.85586)
+push double(5418554.59)
+push double(4561287)
+push double(454654.85586)
+push double(5418554.59)
+push double(4561287)
+push double(454654.85586)
+push double(5418554.59)
+push double(4561287)
+push double(454654.85586)
+push double(5418554.59)
+push double(4561287)
+push double(454654.85586)
+push double(5418554.59)
+add
+mul
+div
+sub
+mul
+div
+sub
+pop
+add
+mul
+div
+pop
+add
+sub
+dump
+pop
+dump
+exit

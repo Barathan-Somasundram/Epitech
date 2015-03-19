@@ -1,0 +1,49 @@
+push int8(42)
+push int32(456783)
+add
+push float(42.588)
+push int32(456783)
+mul
+push double(44564)
+push int16(456)
+div
+add
+mul
+dump
+push int8(42)
+push int32(456783)
+add
+push float(42.588)
+push int32(456783)
+mul
+push double(44564)
+push int16(456)
+div
+add
+mul
+dump
+push int8(42)
+push int32(456783)
+add
+push float(42.588)
+push int32(456783)
+mul
+push double(44564)
+push int16(456)
+div
+add
+mul
+dump
+push int8(42)
+push int32(456783)
+add
+push float(42.588)
+push int32(456783)
+mul
+push double(44564)
+push int16(456)
+div
+add
+mul
+dump
+exit
