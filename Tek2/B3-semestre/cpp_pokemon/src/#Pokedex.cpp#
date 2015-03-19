@@ -1,0 +1,184 @@
+#include "Pokedex.hh"
+
+#include <iostream>
+
+Pokedex::Pokedex()
+  :_list(new QScrollArea()) ,_table(new QTableWidget()),
+   _layout(new QHBoxLayout()), _listLayout(new QVBoxLayout()), _content(new QWidget()), _player(NULL) {
+
+  _player = new QSound("./Jeopardy.wav", this);
+  _player->setLoops(-1);
+  _player->play();
+
+  _content->setLayout(_listLayout);
+
+  setupTable();
+  fillNames();
+  setupList();
+  
+  QObject::connect(_table ,SIGNAL(currentCellChanged(int, int, int, int)), this, SLOT(cellSelected(int, int, int, int)));
+  QObject::connect(_table ,SIGNAL(cellDoubleClicked(int, int)), this, SLOT(openWindow(int, int)));
+
+  _layout->setMargin(0);
+  _layout->addWidget(_list);
+  _layout->addWidget(_table);
+
+  QWidget *central = new QWidget();
+  _layout->setContentsMargins(262, 60, 5, 65);
+  _layout->setSpacing(35);
+
+  central->setLayout(_layout);
+  setCentralWidget(central);
+
+  setWindowTitle(tr("Pokedex"));
+  resize(960, 640);
+  setFixedSize(size());
+  _table->setFocus(Qt::ActiveWindowFocusReason);
+}
+
+
+Pokedex::~Pokedex() {
+	delete _listLayout;
+	delete _list;
+	delete _content;
+	delete _layout;
+	delete _table;
+}
+
+void Pokedex::fillNames() const {
+  PokemonArray &ary = PokemonArray::getInstance();
+  QFont fnt;
+
+  fnt.setPointSize(15);
+  fnt.setFamily("Arial");
+  fnt.setBold(false);
+  addPicToList("pokemonimg/Blanc.png");
+  for (size_t i = 0; i < ary.size(); ++i) {
+	QTableWidgetItem *thumbnail = new QTableWidgetItem(pkmnName(i));
+	_table->setItem(0, i, thumbnail);
+	thumbnail->setFont(fnt);
+	ary[i]->setLabel(addPicToList(imgName(i + 1)));
+  }
+  addPicToList("pokemonimg/Blanc.png");
+  fnt.setBold(true);
+  _table->setCurrentCell(0, 0);
+  _table->item(0, 0)->setFont(fnt);
+  _table->setFocus(Qt::ActiveWindowFocusReason);
+}
+
+void Pokedex::cellSelected(int x, int y, int ox, int oy) {
+  QLabel *toto = PokemonArray::getInstance()[x]->getLabel();
+  QFont fnt1;
+  fnt1.setPointSize(18);
+  fnt1.setFamily("Arial");
+  fnt1.setBold(true);
+  QFont fnt2;
+  fnt2.setPointSize(15);
+  fnt2.setFamily("Arial");
+  _list->ensureWidgetVisible(toto, 0, 121);
+  if (ox != -1 && oy != -1)
+    _table->item(ox, oy)->setFont(fnt2);
+  _table->item(x, y)->setFont(fnt1);
+  _table->scrollToItem(_table->item(x - 1, 0), QAbstractItemView::PositionAtCenter);
+}
+
+void Pokedex::openWindow(int x, int) {
+  StatWindow *stats = new StatWindow(PokemonArray::getInstance()[x]);
+
+  stats->show();
+}
+
+QLabel *Pokedex::addPicToList(std::string const &name) const {
+  QPixmap pic(name.c_str());
+  QPixmap scaled = pic.scaled(200, 200, Qt::IgnoreAspectRatio, Qt::FastTransformation); // TODO: magic values
+  QLabel *label = new QLabel();
+  label->setPixmap(scaled);
+  _listLayout->addWidget(label);
+  return label;
+}
+
+const char *Pokedex::pkmnName(int i) const {
+  PokeStats stats = PokemonArray::getInstance()[i]->getStats();
+  std::stringstream tmp;
+  tmp << "No. ";
+  tmp << i + 1;
+  tmp << " ";
+  tmp << stats["name"];
+  return tmp.str().c_str();
+}
+
+std::string Pokedex::imgName(int i) const {
+  std::stringstream tmp;
+  tmp << "pokemonimg/";
+  tmp << i;
+  tmp << ".png";
+  return tmp.str();
+}
+
+void Pokedex::setupList() const {
+  _list->setWidget(_content);
+  _list->setStyleSheet("background-color:transparent;border:0;");
+  _list->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+  _list->setFixedSize(QSize(242, 448));
+}
+
+void Pokedex::setupTable() const {
+  QPalette palette = _table->palette();
+  palette.setBrush(QPalette::Highlight,QBrush(Qt::white));
+  palette.setBrush(QPalette::HighlightedText,QBrush(Qt::black));
+  _table->setPalette(palette);
+  _table->setRowCount(PokemonArray::getInstance().size());
+  _table->setColumnCount(1);
+  _table->verticalHeader()->setVisible(false);
+  _table->horizontalHeader()->setVisible(false);
+  _table->horizontalHeader()->setResizeMode(0, QHeaderView::Stretch);
+  _table->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+  _table->setShowGrid(false);
+  _table->setEditTriggers(QAbstractItemView::NoEditTriggers);
+  _table->setStyleSheet("background-color:transparent;border:0;");
+}
+
+void Pokedex::paintEvent(QPaintEvent *) {
+  QPixmap toto("back.png");
+  toto = toto.scaled(960, 640, Qt::IgnoreAspectRatio, Qt::FastTransformation);
+
+  QPainter painter(this);
+  
+  QBrush background(toto);
+  
+  painter.setBrush(background);
+  painter.setPen(Qt::NoPen);
+  
+  painter.drawRect(0, 0, width(), height());
+}
+
+void Pokedex::goToEvol(int type)
+{
+  if (_table->currentRow() != -1)
+    {
+      Pokemon* poke = PokemonArray::getInstance()[_table->currentRow()];
+      PokeEvolutions evol = poke->getEvolutions();
+      PokeStats ev = evol[0];
+      unsigned int i = 0;
+      
+      while (i != evol.size() && std::atoi((evol[i]["id"]).c_str()) != (_table->currentRow() + 1))
+	i++;
+      if (type == 1 && i + 1 < evol.size()) 
+	_table->setCurrentCell(std::atoi((evol[i + 1]["id"]).c_str()) -1, 0);
+      else if (type == 0 && i > 0) 
+	_table->setCurrentCell(std::atoi((evol[i - 1]["id"]).c_str()) -1 , 0);
+    }
+}
+
+void Pokedex::keyPressEvent(QKeyEvent *event) // TODO: magic values
+{
+  int key = event->key();
+  if(key == Qt::Key_Escape)
+    close();
+  else if (key == Qt::Key_Right)
+    goToEvol(1);
+  else if (key == Qt::Key_Left)
+    goToEvol(0);
+  else if (key == Qt::Key_Return || key == Qt::Key_Enter)
+    openWindow(_table->currentRow(), 0);
+}
