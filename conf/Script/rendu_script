@@ -1,0 +1,11 @@
+ssh-keygen -t rsa
+(entrer 2 fois)
+blih -u somasu_b sshkey upload ~/.ssh/id_rsa.pub
+blih -u somasu_b repository create SHL_2014_bdsh
+blih -u somasu_b repository setacl SHL_2014_bdsh ramassage-tek r
+blih -u somasu_b repository getacl SHL_2014_bdsh
+git clone somasu_b@git.epitech.eu:/somasu_b/SHL_2014_bdsh
+
+git add --all
+git commit -am ""
+git push origin master

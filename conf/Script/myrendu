@@ -1,0 +1,55 @@
+#!/bin/sh
+
+if [ $# != 1 ]; then
+   echo "Usage: ./rendu -option"
+   exit 1
+fi
+
+if [ $1 == "make" ]; then
+    PHRASE="nom de dossier :"
+    read -p "$PHRASE" DEPOT
+    
+    blih -u somasu_b repository create "$DEPOT"
+    blih -u somasu_b repository setacl "$DEPOT" ramassage-tek r
+    blih -u somasu_b repository getacl "$DEPOT"
+    git clone somasu_b@git.epitech.eu:/somasu_b/"$DEPOT"
+fi
+
+if [ $1 == "rendu" ]; then
+    git add --all
+    PHRASE="commentaire :"
+    read -p "$PHRASE" DEPOT
+    git commit -am "$DEPOT"
+    git push origin master
+fi
+
+if [ $1 == "setacl" ]; then
+    # if [ $# != 2 ]; then
+    # 	echo "Usage: ./myrendu setacl [nb de set]"
+    # 	exit 1
+    # fi
+    # PHRASE="nom de dossier :"
+    # read -p "$PHRASE" DEPOT
+    # i=0;
+    # while [ $i < $2 ];
+    # do
+	PHRASE1="login :"
+	read -p "$PHRASE1" LOGIN
+	PHRASE2="depot :"
+	read -p "$PHRASE2" DEPOT
+	blih -u somasu_b repository setacl "$DEPOT" "$LOGIN" rw
+    # done	
+    blih -u somasu_b repository getacl "$DEPOT"
+fi
+
+if [ $1 == "merge" ]; then
+    git add --all
+    PHRASE="commentaire :"
+    read -p "$PHRASE" DEPOT
+    git commit -am "$DEPOT"
+    git pull origin master
+fi
+
+if [ $1 == "pull" ]; then
+    git pull
+fi
