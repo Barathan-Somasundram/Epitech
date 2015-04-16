@@ -1,0 +1,41 @@
+#!/usr/bin/python
+
+from sys import argv, exit
+from matplotlib.pyplot import show, plot, xlabel, ylabel, legend, grid, title
+from numpy import arange, cos
+from math import pi
+
+def my_execfunc(av):
+    def my_sigma(a, nmax, x):
+        res = 0.0
+        for k in range(0, nmax + 1):
+            res = res + cos((a ** k) * pi * x) / (2 ** k)
+        return (res)
+    a = float(av[1])
+    if (a < 2.0):
+        exit("The number 'a' must be higher than 2")
+    nmax = int(av[2])
+    if (nmax < 1):
+        exit("The limit k must be positive and not 0")
+    x = arange(-2, 2, 0.0001)
+    plot(x, my_sigma(a, nmax, x), 'g')
+    grid()
+    title('Projet : 108monstre auteur : song_k, somasu_b\na = %g; nmax = %i' % (a, nmax))
+    ylabel('axe des ordonnees(f(x)')
+    xlabel('axe des abcisses(x)')
+    show()
+
+def main(ac, argv):
+    if ac == 3:
+        my_execfunc(argv)
+    else:
+        print "Usage : ./108monstre [a] [Nmax]"
+
+if __name__ == '__main__':
+    try:
+        ac = len(argv)
+        main(ac, argv)
+    except (SyntaxError):
+        exit('A Syntax Error has happen')
+    except(ValueError):
+        exit('Input: Bad Value !')

@@ -1,0 +1,21 @@
+<scene>
+  <eye>
+    <position x="8.0" y= "12.0" z= "-15.0" />
+    <direction x="0" y="0" z="0"/>
+  </eye>
+  <light>
+    <position x="10" y="20" z="-10" />
+    <color r="255" g="255" b="255"/>
+  </light>
+  <object type = "sphere">
+    <position x="10.0" y="10" z="10" />
+    <rayon R="2.0"/>
+    <color r="255" g="255" b="0"/>
+  </object>
+  <object type = "cylindre">
+    <position x="10" y="10" z="10" />
+    <rayon R="1.0"/>
+    <color r="255" g="0" b="255"/>
+    <rotation x="90" y="0" z="0"/>
+  </object>
+</scene>

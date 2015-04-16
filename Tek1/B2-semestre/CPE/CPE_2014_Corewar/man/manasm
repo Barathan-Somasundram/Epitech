@@ -1,0 +1,40 @@
+.TH ASM 1 "April 2014" "version 1.0" "COREWAR"
+.SH NAME
+asm \- Assembler, compile champions
+.SH SYNOPSIS
+.PP
+ ./asm file.s ...
+.SH DESCRIPTION
+.PP
+Compile the file.s, passing in argument, and create a file.cor for the Virtual Machine of the Corewar project.
+.SH ERRORS
+.PP
+Can't compile a non file.s
+.PP
+Can't compile the file.s when the file have this following error:
+.PP
+* If there is an unavailable character in the file
+  aff: "Syntax error line #" ("#" : line 's number)
+.PP
+* If there is a unavailable opcode in the file.
+  aff: "Syntax error line #"
+.PP
+* If indirection < IDX_MOD.
+  aff: "Warning Indirection to far line #"
+.PP
+* If there is a unknown label.
+  aff: "label THE_LABEL undefine line #"
+.PP
+* If there is a unavailable register.
+  aff: "no such register line #"
+.PP
+* If there is a unavailable Direct value.
+  aff: "Warning Direct too big line #"
+.SH EXIT_STATUS
+On success, the program returns 0.
+.PP
+On error, \-1 is returned.
+.SH AUTHORS
+Barathan Somasundram (somasu_b), Alexendre Tailleur (taille_a), Tony Sam (sam_t), Valentin Ramahlo (ramahl_v)
+.SH SEE ALSO
+man corewar(1)

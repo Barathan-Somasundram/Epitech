@@ -1,0 +1,1 @@
+groff -Tascii -mandoc ./man/manvm | more

@@ -1,0 +1,58 @@
+<scene>
+  <eye>
+    <filter type="yellow" />
+    <position x="0.0" y= "60.0" z= "-30.0" />
+    <direction x="45" y="0" z="0"/>
+    <scale scale="0.5"/>
+  </eye>
+  <light>
+    <position x="160" y="300" z="0" />
+    <color r="255" g="255" b="255"/>
+  </light>
+  <light>
+    <position x="0" y="55" z="35" />
+    <color r="125" g="255" b="255"/>
+  </light>
+  <object type = "plan">
+    <rotation x="0" y="0" z="180"/>
+    <high D="0" />
+    <color r="255" g="204" b="102"/>
+  </object>
+  <object type = "sphere">
+    <position x="-30.0" y="9" z="30" />
+    <rayon R="5.5"/>
+    <color r="0" g="255" b="0"/>
+    <reflection alpha="0.7"/>
+  </object>
+  <object type = "sphere">
+    <position x="-30.0" y="18" z="30" />
+    <rayon R="5.5"/>
+    <color r="0" g="255" b="0"/>
+    <reflection alpha="0.7"/>
+  </object>
+  <object type = "sphere">
+    <position x="15.0" y="25" z="35" />
+    <rayon R="15.5"/>
+    <color r="0" g="255" b="0"/>
+    <reflection alpha="0.7"/>
+    <wave type="z" space="2" scale="65"/>
+  </object>
+  <object type = "cylindre">
+    <position x="-10.0" y="0" z="0" />
+    <rayon R="5.5"/>
+    <color r="0" g="200" b="255"/>
+    <rotation x="100" y="-70" z="35"/>
+  </object>
+  <object type = "cylindre">
+    <position x="-55.0" y="-35" z="28" />
+    <rayon R="5.5"/>
+    <color r="0" g="200" b="255"/>
+    <rotation x="100" y="-70" z="35"/>
+  </object>
+  <object type = "cylindre">
+    <position x="-55.0" y="-15" z="15" />
+    <rayon R="2.5"/>
+    <color r="0" g="200" b="255"/>
+    <rotation x="100" y="-78" z="20"/>
+  </object>
+</scene>

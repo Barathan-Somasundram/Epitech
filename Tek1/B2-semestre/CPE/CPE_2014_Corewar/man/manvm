@@ -1,0 +1,49 @@
+.TH corewar 1 "April 2014" "version 1.0" "COREWAR"
+.SH NAME
+corewar
+.SH SYNOPSIS
+ ./corewar [OPTION] ... [[OPTIONS] file.cor] ...
+ ex: ./corewar -dump nbr_cycles [[-n prog_number][-a load_address] file.cor] ..
+.SH DESCRIPTION
+Virtual Machine's part of the Corewar project. Receive the FILE.cor
+passing in parameter and execute them for the project.
+.PP
+During the game, the executable send the message "le joueur # est en
+vie" (# the number of the player) for inform the user which program
+is alive.
+.PP
+The executable send the message "le joueur # a gagne" when only one
+program stand.
+.SH OPTIONS
+The executable can have option:
+.PP
+-dump [NBR_CYCLE]
+Dump the memory after NBR_CYCLE of execution (if the game is not over
+yet) in 32 octet format per line and XX format for hexadecimal's code.
+When the memory is dumped, you quit the game.
+.PP
+-n [PROG_NUMBER]
+Set the number of the next program. By default, the executable choose
+the first free number order by parameter.
+.PP
+-a [LOAD_ADDRESS]
+Set the loading adress of the next program. When no adress is precise,
+the executable choose the adress so that the program will be distant
+each other.
+.SH ERRORS
+Can't execute if the file is not a FILE.cor.
+aff: "FILE is not a corewar executable" (with FILE the file's name)
+.PP
+Can't execute if there is a error for the option:
+.PP
+* unavailable option.
+.PP
+* unavailable parameter for the option.
+.SH EXIT_STATUS
+On success, the program returns 0.
+.PP
+On error, \-1 is returned.
+.SH AUTHORS
+Barathan Somasundram (somasu_b), Alexendre Tailleur (taille_a), Tony Sam (sam_t), Valentin Ramahlo (ramahl_v)
+.SH SEE ALSO
+man asm

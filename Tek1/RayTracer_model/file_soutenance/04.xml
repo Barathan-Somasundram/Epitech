@@ -1,0 +1,26 @@
+<scene>
+  <eye>
+    <position x="0.0" y= "10.0" z= "-15.0"/>
+    <direction x="0" y="0" z="0"/>
+    <scale scale ="1.0" />
+  </eye>
+  <object type = "plan">
+    <rotation x="0" y="0" z="180" />
+    <high D="0" />
+    <color r="255" g="255" b="255"/>
+  </object>
+  <light>
+    <position x="20" y="10" z="-100"/>
+    <color r="255" g="255" b="255"/>
+  </light>
+  <light>
+    <position x="0" y="8" z="-50"/>
+    <color r="255" g="255" b="255"/>
+  </light>
+ <object type = "cone">
+    <rotation x="-50" y="0" z="0" />
+    <position x="0" y="10" z="40" />
+    <angle angle="35"/>
+    <color r="255" g="102" b="54"/>
+ </object>
+</scene>

@@ -1,0 +1,504 @@
+<scene>
+  <eye>
+    <position x="0" y= "7" z= "-40" />
+    <direction x="-10" y="0" z="0"/>
+    <scale scale="1" />
+  </eye>
+  <light>
+    <position x="0" y="25" z="8" />
+    <color r="255" g="255" b="255"/>
+  </light>
+  <light>
+    <position x="0" y="25" z="8" />
+    <color r="51" g="204" b="255"/>
+  </light>
+  <light>
+    <position x="0" y="25" z="8" />
+    <color r="51" g="204" b="255"/>
+  </light>
+  <object type = "sphere">
+    <position x="12" y="4" z="20" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="6" y="4" z="20" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="0" y="4" z="20" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-6" y="4" z="20" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-12" y="4" z="20" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="12" y="4" z="20" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="12" y="4" z="14" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="12" y="4" z="8" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="12" y="4" z="2" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="12" y="4" z="-4" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="6" y="4" z="-4" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="0" y="4" z="-4" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-6" y="4" z="-4" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-12" y="4" z="-4" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-12" y="4" z="2" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-12" y="4" z="8" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-12" y="4" z="14" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-6" y="4" z="2" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-6" y="4" z="8" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-6" y="4" z="14" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="0" y="4" z="2" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="0" y="4" z="8" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="0" y="4" z="14" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="6" y="4" z="2" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="6" y="4" z="8" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="6" y="4" z="14" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="9" y="8" z="17" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="9" y="8" z="11" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="9" y="8" z="5" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="9" y="8" z="-1" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="3" y="8" z="17" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="3" y="8" z="11" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="3" y="8" z="5" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="3" y="8" z="-1" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-3" y="8" z="17" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-3" y="8" z="11" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-3" y="8" z="5" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-3" y="8" z="-1" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-9" y="8" z="17" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-9" y="8" z="11" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-9" y="8" z="5" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-9" y="8" z="-1" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-6" y="12" z="14" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="0" y="12" z="14" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="6" y="12" z="14" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-6" y="12" z="8" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="0" y="12" z="8" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="6" y="12" z="8" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-6" y="12" z="2" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="0" y="12" z="2" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="6" y="12" z="2" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="3" y="16" z="11" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-3" y="16" z="11" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="3" y="16" z="5" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="-3" y="16" z="5" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "sphere">
+    <position x="0" y="20.5" z="8" />
+    <rayon R="3"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.8" />
+    <wave type="z" space="5" scale="1"/>
+  </object>
+  <object type = "plan">
+    <rotation x="0" y="0" z="180" />
+    <high D="4.5" />
+    <color r="51" g="51" b="255"/>
+    <shining shine="2" />
+    <reflection alpha="0.9" />
+    <wave type="x" space="2" scale="0.05"/>
+    <wave type="z" space="2" scale="0.05"/>
+    <transparency gamma="0.9" diffraction="0.8" />
+  </object>
+  <object type = "plan">
+    <rotation x="0" y="0" z="0" />
+    <high D="-50" />
+    <color r="51" g="255" b="255"/>
+    <shining shine="10" />
+    <reflection alpha="0.9" />
+  </object>
+  <object type = "sphere">
+    <position x="0" y="25" z="8" />
+    <rayon R="12"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <wave type="z" space="5" scale="1"/>
+    <transparency gamma="0.8" diffraction="0.8" />
+    <limit type="y+" value="26" />
+    <limit type="y-" value="24" />
+  </object>
+  <object type = "sphere">
+    <position x="0" y="30" z="8" />
+    <rayon R="8"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="2" />
+    <wave type="z" space="5" scale="1"/>
+    <transparency gamma="0.8" diffraction="0.8" />
+    <limit type="y+" value="31" />
+    <limit type="y-" value="29" />
+  </object>
+</scene>

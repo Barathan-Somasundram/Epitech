@@ -1,0 +1,18 @@
+<scene>
+  <eye>
+    <position x="0.0" y= "20.0" z= "-35.0" /><!-- espace possible entre = et "", mais pas " 4.0 "
+    peut être sur plusieurs ligne-->
+    <direction x="0" y="0" z="0"/>
+    <scale scale="1"/>
+  </eye>
+  <light>
+    <position x="-2" y="20" z="0" /><!-- espace possible entre ? et =, = et "", mais pas " n "
+    peut être sur plusieurs ligne-->
+    <color r="0" g="0" b="255"/>
+    <!-- <fov alpha=""/>  fov définissable pour effectuer certains effets?-->
+  </light>
+  <object type = "plan">
+    <rotation x="0" y="0" z="180" />
+    <color r="255" g="255" b="255"/>
+  </object>
+</scene>

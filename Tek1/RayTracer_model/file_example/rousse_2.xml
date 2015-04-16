@@ -1,0 +1,117 @@
+<scene>
+  <eye>
+    <position x="0.0" y= "30.0" z= "-50.0" />
+    <direction x="10" y="0" z="0"/>
+  </eye>
+  <light>
+    <position x="50" y="50" z="-100" />
+    <color r="255" g="255" b="255"/>
+    <!-- <fov alpha=""/>  fov définissable pour effectuer certains effets?-->
+  </light>
+  <object type = "plan">
+    <rotation x="0" y="-10" z="0" />
+    <high D="0" />
+    <color r="50" g="255" b="50"/>
+  </object>
+  <object type = "plan">
+    <rotation x="0" y="-10" z="0" />
+    <high D="-100" />
+    <color r="50" g="50" b="255"/>
+  </object>
+  <object type = "cylindre">
+    <rotation x="0" y="0" z="0" />
+    <position x="-30" y="10" z="10" />
+    <rayon R="3" />
+    <color r="255" g="125" b="75"/>
+  </object>
+  <object type = "sphere">
+    <position x="-30" y="40" z="10" />
+    <rayon R="12" />
+    <color r="0" g="200" b="0"/>
+  </object>
+  <object type = "sphere">
+    <position x="-18" y="40" z="10" />
+    <rayon R="2" />
+    <color r="200" g="0" b="0"/>
+  </object>
+  <object type = "sphere">
+    <position x="-21" y="35" z="4" />
+    <rayon R="2" />
+    <color r="200" g="0" b="0"/>
+  </object>
+  <object type = "sphere">
+    <position x="-25" y="42" z="0" />
+    <rayon R="2" />
+    <color r="200" g="0" b="0"/>
+  </object>
+  <object type = "sphere">
+    <position x="-30" y="38" z="-1" />
+    <rayon R="2" />
+    <color r="200" g="0" b="0"/>
+  </object>
+  <object type = "sphere">
+    <position x="-28" y="33" z="0" />
+    <rayon R="2" />
+    <color r="200" g="0" b="0"/>
+  </object>
+  <object type = "sphere">
+    <position x="-20" y="45" z="4.5" />
+    <rayon R="2" />
+    <color r="200" g="0" b="0"/>
+  </object>
+  <object type = "sphere">
+    <position x="0" y="10" z="0" />
+    <rayon R="7" />
+    <color r="200" g="150" b="150"/>
+  </object>
+  <object type = "sphere">
+    <position x="0" y="15" z="-5" />
+    <rayon R="5" />
+    <color r="200" g="150" b="150"/>
+  </object>
+  <object type = "sphere">
+    <position x="-2" y="17" z="-9" />
+    <rayon R="1" />
+    <color r="255" g="255" b="255"/>
+  </object>
+  <object type = "sphere">
+    <position x="2" y="17" z="-9" />
+    <rayon R="1" />
+    <color r="255" g="255" b="255"/>
+  </object>
+  <object type = "sphere">
+    <position x="2" y="17" z="-9.8" />
+    <rayon R="0.5" />
+    <color r="0" g="0" b="0"/>
+  </object>
+  <object type = "sphere">
+    <position x="-2" y="17" z="-9.8" />
+    <rayon R="0.5" />
+    <color r="0" g="0" b="0"/>
+  </object>
+  <object type = "sphere">
+    <position x="0" y="15" z="-9.8" />
+    <rayon R="1.5" />
+    <color r="200" g="150" b="150"/>
+  </object>
+  <object type = "sphere">
+    <position x="-3" y="19" z="-4" />
+    <rayon R="2" />
+    <color r="200" g="150" b="150"/>
+  </object>
+  <object type = "sphere">
+    <position x="3" y="19" z="-4" />
+    <rayon R="2" />
+    <color r="200" g="150" b="150"/>
+  </object>
+  <object type = "sphere">
+    <position x="3" y="19" z="-4.8" />
+    <rayon R="1.5" />
+    <color r="255" g="235" b="235"/>
+  </object>
+  <object type = "sphere">
+    <position x="-3" y="19" z="-4.8" />
+    <rayon R="1.5" />
+    <color r="255" g="235" b="235"/>
+  </object>
+</scene>

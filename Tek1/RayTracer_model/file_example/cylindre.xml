@@ -1,0 +1,39 @@
+<scene>
+  <eye>
+    <position x="0.0" y= "20.0" z= "-40.0" /><!-- espace possible entre = et "", mais pas " 4.0 "
+    peut être sur plusieurs ligne-->
+    <direction x="15" y="0" z="0"/>
+    <scale scale="1"/>
+  </eye>
+  <object type = "cylindre">
+    <position x="0" y="5" z="6" />
+    <rayon R="5"/>
+    <rotation x="0" y="0" z="0" />
+    <shining shine="10"/>
+  </object>
+  <object type = "plan"> <!-- structure de commentaire
+			      (possible sur multi-ligne -->
+    <rotation x="0" y="0" z="0" />
+    <high D="0" />
+    <color r="255" g="255" b="255"/>
+    <limit type="x+" value="30.0"/>
+    <limit type="x-" value="-30.0"/>
+    <limit type="z+" value="30.0"/>
+    <limit type="z-" value="-30.0"/>
+  </object>
+  <object type = "sphere">
+    <position x="2.0" y="10" z="-3" />
+    <rayon R="5.0"/>
+    <color r="0" g="0" b="255"/>
+    <reflection alpha="0.9999"/>
+    <shining shine="10"/>
+  </object>
+  <light>
+    <position x="-15" y="15" z="0" />
+    <color r="255" g="255" b="255"/>
+  </light>
+  <light>
+    <position x="15" y="15" z="0" />
+    <color r="255" g="255" b="255"/>
+  </light>
+</scene>

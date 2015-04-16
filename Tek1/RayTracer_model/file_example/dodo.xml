@@ -1,0 +1,93 @@
+<scene>
+  <eye>
+    <position x="0" y= "2" z= "-40" />
+    <direction x="-12" y="0" z="0"/>
+    <scale scale="1" />
+  </eye>
+  <light>
+    <position x="10" y="5" z="-40" />
+    <color r="255" g="255" b="255"/>
+  </light>
+  <light>
+    <position x="-10" y="5" z="-40" />
+    <color r="255" g="255" b="255"/>
+  </light>
+  <light>
+    <position x="0" y="5" z="-40" />
+    <color r="255" g="255" b="255"/>
+  </light>
+  <light>
+    <position x="0" y="5" z="-40" />
+    <color r="255" g="255" b="255"/>
+  </light>
+  <light>
+    <position x="0" y="5" z="-40" />
+    <color r="255" g="255" b="255"/>
+  </light>
+  <object type = "sphere">
+    <position x="-35" y="6" z="20" />
+    <rayon R="15"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="0" />
+    <reflection alpha="0.9" />
+    <wave type="z" space="5" scale="0.9999"/>
+  </object>
+  <object type = "sphere">
+    <position x="30" y="20" z="7" />
+    <rayon R="6"/>
+    <color r="255" g="255" b="255"/>
+    <shining shine="0" />
+    <reflection alpha="0.4" />
+    <transparency gamma="0.9" diffraction="0.6" />
+  </object>
+  <object type = "sphere">
+    <position x="5" y="7" z="5" />
+    <rayon R="6"/>
+    <color r="255" g="0" b="0"/>
+    <shining shine="0.2" />
+    <reflection alpha="0" />
+    <wave type="z" space="15" scale="0.9999"/>
+    <wave type="y" space="15" scale="0.9999"/>
+    <wave type="x" space="15" scale="0.9999"/>
+    <reflection alpha="0.9" />
+  </object>
+  <object type = "plan">
+    <rotation x="0" y="0" z="180" />
+    <high D="0" />
+    <color r="153" g="153" b="153"/>
+    <shining shine="0.2" />
+    <reflection alpha="0.7" />
+    <wave type="x" space="5" scale="0.1"/>
+  </object>
+  <object type = "plan">
+    <rotation x="-90" y="0" z="180" />
+    <high D="-50" />
+    <color r="20" g="227" b="255"/>
+    <shining shine="0.2" />
+    <reflection alpha="0.7" />
+  </object>
+  <object type = "plan">
+    <rotation x="90" y="0" z="180" />
+    <high D="-100" />
+    <color r="15" g="91" b="255"/>
+    <shining shine="0.2" />
+    <reflection alpha="0.9" />
+  </object>
+  <object type = "cone">
+    <position x="30" y="0" z="20" />
+    <angle angle="15" />
+    <color r="255" g="255" b="255"/>
+    <shining shine="0" />
+    <reflection alpha="0.9" />
+    <wave type="y" space="5" scale="0.9"/>
+    <wave type="x" space="5" scale="0.9"/>
+  </object>
+  <object type = "cylindre">
+    <position x="-12" y="0" z="25" />
+    <rayon R="4"/>
+    <rotation x="0" y="0" z="0" />
+    <shining shine="0.5"/>
+    <color r="102" g="0" b="204"/>
+    <reflection alpha="0.8" />
+  </object>
+</scene>
