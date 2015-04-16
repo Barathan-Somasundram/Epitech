@@ -1,0 +1,88 @@
+#!/usr/bin/python
+
+from sys import argv
+from matplotlib import pyplot
+from scipy import integrate
+import numpy
+import math
+
+sec = 0.01667;
+
+def calcDensite(p):
+    d = []
+    for i in range(0, 601):
+        d.append(p * math.exp(-i * sec) + (4 - 3 * p) * math.exp(-2 * i * sec) + (2 * p - 4) * math.exp(-4 * i * sec))
+    return d
+
+def calcRepart(p):
+    tab = []
+    for i in range(0, 601):
+        f = lambda x : p * math.exp(-x) + (4 - 3 * p) * math.exp(-2 * x) + (2 * p - 4) * math.exp(-4 * x)
+        tab.append(integrate.quad(f, 0, i * sec))
+    r = []
+    for i in range(0, 601):
+        r.append(tab[i][0])
+    return r
+
+def Graph(d, r):
+    x = []
+    for i in range(0, 601):
+        x.append(i * sec)
+    pyplot.plot(x, d, color='r', label="Densite")
+    pyplot.plot(x, r, color='b', label="Repart")
+    pyplot.legend()
+    pyplot.show()
+
+def calcRet(p):
+    f = lambda x : x * (p * math.exp(-x) + (4 - 3 * p) * math.exp(-2 * x) + (2 * p - 4) * math.exp(-4 * x))
+    t = integrate.quad(f, 0, 10)
+    a = t[0]
+    print "temps de retour moyen :\t\t\t\t\t%d" % a, "minute(s) et %d" % ((a - int(a)) * 60), "secondes"
+    return a
+
+def calcEqu(p, esp):
+    f = lambda x : pow(x - esp, 2) * (p * math.exp(-x) + (4 - 3 * p) * math.exp(-2 * x) + (2 * p - 4) * math.exp(-4 * x))
+    t = integrate.quad(f, 0, numpy.inf)
+
+    print "ecart-type des temps de retour :\t\t\t", round(math.sqrt(t[0]), 3)
+    return
+
+def returnCanard(r, percent):
+    i = 0
+    while r[i] < percent:
+        i = i + 1
+    print "temps au bout duquel %d" % (percent * 100), "des canards sont revenus :\t%d" % (i / 60), "minute(s) et %d" % (i % 60), "secondes"
+    return
+
+def returnPCanard(r, m):
+
+    a = r[m * 60] * 100
+    print "pourcentage de canards revenus apres %d" % m, "minute :\t\t%d" % a, "%"
+    return
+
+def canards204():
+    if len(argv) == 2 :
+        try:
+            param = float(argv[1])
+        except Exception:
+            print "Invalid Param"
+            exit(1)
+        if param < 0 or param > 2.5 :
+            print "Usage : ./204canards 0 < [a] < 2.5"
+            exit(1)
+        d = calcDensite(param)
+        r = calcRepart(param)
+        
+        ret_moy = calcRet(param)
+        calcEqu(param, ret_moy)
+        returnCanard(r, 0.5)
+        returnCanard(r, 0.99)
+        returnPCanard(r, 1)
+        returnPCanard(r, 2)
+
+        Graph(d, r)
+    else :
+        print "Usage : ./204canards 0 < [a] < 2.5"
+
+if __name__ == "__main__":
+    canards204()
