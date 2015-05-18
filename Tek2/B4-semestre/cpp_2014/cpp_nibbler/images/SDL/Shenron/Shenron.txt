@@ -1,0 +1,65 @@
+HEAD
+
+	---
+	*X-		-1.0		shenron_part_1_-1.0
+	---
+
+	---
+	-X*		1.0		shenron_part_1_1.0
+	---
+
+	-*-
+	-X-		0.-1		shenron_part_1_0.-1
+	---
+
+	---
+	-X-		0.1		shenron_part_1_0.1
+	-*-
+TAIL
+
+	---
+	*X-		-1.0		shenron_part_3_-1.0
+	---
+
+	---
+	-X*		1.0		shenron_part_3_1.0
+	---
+
+	-*-
+	-X-		0.-1		shenron_part_3_0.-1
+	---
+
+	---
+	-X-		0.1		shenron_part_3_0.1
+	-*-
+
+
+
+BODY
+
+	---
+	*X*		-1.0 | 1.0	shenron_part_2_-1.0,1.0
+	---
+
+	-*-
+	-X-		0.-1 | 0.1	shenron_part_2_0.-1,0.1
+	-*-
+
+
+
+	---
+	-X*		1.0 | 0.-1	shenron_part_2_1.0,0.-1
+	-*-
+
+	-*-
+	-X*		0.-1 | 1.0	shenron_part_2_0.-1,1.0
+	---
+
+	-*-
+	*X-		0.-1 | -1.0	shenron_part_2_0.-1,-1.0
+	---
+
+	---
+	*X-		-1.0 | 0.1	shenron_part_2_-1.0,0.1
+	-*-
+

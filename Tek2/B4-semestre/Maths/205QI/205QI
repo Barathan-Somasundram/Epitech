@@ -1,0 +1,82 @@
+#!/usr/bin/python
+
+from sys import argv
+from matplotlib import pyplot
+from scipy import integrate
+import numpy
+import math
+
+def qi_graph(u, a) :
+    tab_y = []
+    tab_x = []
+    tmp = 0.0
+    i = 0.0
+    mod = 0
+    total = 0.0
+    call = 0
+
+    while i < 201 :
+        tmp = (1.0 / (a * math.sqrt(2.0 * math.pi))) * math.exp(-(pow((i - u), 2.0) / (2.0 * pow(a, 2.0))))
+        if mod == 100 :
+            tab_y.append(total + tmp)
+            mod = 0
+            call = call + 1
+        total = total + tmp
+        i = i + 0.01
+        mod = mod + 1
+    for b in range(0, 201):
+        tab_x.append(b)
+    pyplot.plot(tab_x, tab_y, color='r', label="Repartition")
+    pyplot.legend()
+    pyplot.show()
+    return 1
+
+def qi_under(u, a, qi) :
+    i = 0.0
+    tmp = 0.0
+
+    while i < qi :
+        tmp = tmp + (1.0 / (a * math.sqrt(2.0 * math.pi))) * math.exp(-(pow((i - u), 2.0) / (2.0 * pow(a, 2.0))))
+        i = i + 0.01
+    print round(tmp, 3), "%", "des personnes ont un QI < %d" % qi
+    return 1
+
+def qi_between(u, a, qi_min, qi_max) :
+    i = qi_min
+    tmp = 0.0
+
+    while i < qi_max :
+        tmp = tmp + (1.0 / (a * math.sqrt(2.0 * math.pi))) * math.exp(-(pow((i - u), 2.0) / (2.0 * pow(a, 2.0))))
+        i = i + 0.01
+    print round(tmp, 3), "%", "des personnes ont un QI compris entre %d" % qi_min, "et %d" % qi_max
+    return 1
+
+def qi204():
+    try:
+        if float(argv[1]) <= 0 or float(argv[2]) <= 0 :
+            print "Argument u and o must be > 0"
+        else :
+            if len(argv) == 3 :
+                qi_graph(float(argv[1]), float(argv[2]))
+            elif len(argv) == 4:
+                if float(argv[3]) <= 0 :
+                    print "QI must be > 0"
+                else :
+                    qi_under(float(argv[1]), float(argv[2]), float(argv[3]))
+            elif len(argv) == 5:
+                if float(argv[3]) <= 0 or float(argv[4]) <= 0:
+                    print "QImin and QImax must be > 0"
+                elif float(argv[3]) >= float(argv[4]) :
+                    print "QImin must be < QImax"
+                else :
+                    qi_between(float(argv[1]), float(argv[2]), float(argv[3]), float(argv[4]))
+            else :
+                print "Usage : ./205QI u o"
+                print "Usage : ./205QI u o Qi < param1"
+                print "Usage : ./205QI u o param1 < QI < param2"
+    except Exception:
+        print "Invalid Param"
+        return 1
+
+if __name__ == "__main__":
+    qi204()
